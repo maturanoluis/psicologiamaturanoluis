@@ -1,0 +1,360 @@
+/* --------------------RESET-----------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+
+/* --------------------BODY-----------------*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #CDCCC8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+
+}
+.gridPadre{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "slogan slogan slogan"
+    "contenido contenido contenido"
+    "footer footer footer";
+    justify-items: center;
+    align-items: stretch;
+    
+
+}
+/* --------------------HEADER-----------------*/
+header{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+
+/* --------------------MENU-----------------*/
+
+.menu{
+    list-style-type: none;
+    text-align: left;
+    padding:1rem;
+    width: 100%;
+    margin: 0 0 0 20px;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.menu ul li{
+    display: flex;
+    
+}
+
+.menu a{
+    border: solid black;
+    border-width: 0.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.2rem;
+    font-size: 1rem;
+    background-image: linear-gradient(to right, grey,white);
+    color: black;
+       
+}
+
+
+/* --------------------LOGO-----------------*/
+.logo img{
+    width:5rem;
+    height:5rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+          
+}
+/* --------------------MAIN-----------------*/
+
+
+.contenido{
+    grid-area: contenido;
+    display: flex;
+    justify-items: center;
+    align-items:center;
+    display: inline;
+    text-align: center;
+    width: 90%;
+    height: 80%;
+  
+}
+
+
+
+h1{
+    grid-area: titulo;
+    text-align: center;
+    padding:2rem;
+    text-decoration: none;
+    color: black;
+}
+
+h2{
+    grid-area: slogan;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+section{
+   
+   padding: 2rem;
+   text-align: center;
+   
+
+}
+
+section p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+section p a{
+    text-align: center;
+    border: solid 1px black;
+    border-width: 0.2rem;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transform: rotate(10deg);
+    height: 3rem;
+    width: 6rem;
+    transition: height 1s, width 1s;
+}
+section p a:hover{
+    text-align: center;
+    border: solid 1px black;
+    border-width: 0.2rem;
+    background-color: white;
+    color: black;
+    height: 4rem;
+    width: 8rem;
+}
+
+/*--------------FOOTER---------------*/
+
+.pie{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-bottom: auto;
+}
+
+.pie ul li{
+    display: inline;
+    list-style-type: none;
+}
+
+.pie ul li a{
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+}
+
+
+
+
+/*--------------TERAPIAS CONTENIDO---------------*/
+.videos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.videos iframe{
+    
+    width: 20rem;
+    height: 10rem;
+}
+
+/*--------------CONTACTO FORMULARIO---------------*/
+.formulario{
+    text-align: center;
+    margin: 30px;
+}
+
+/*--------------NOSOTROS INFORMACION---------------*/
+.informacion{
+    display: flex;
+    flex-direction: column;
+   border: solid 1px rgb(0, 0, 0);
+    border-width: 0.1rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  
+    width: 50%;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    padding: 50px;
+
+    
+}
+
+.informacion p{
+    text-align: center;
+    font-size: 1rem;
+
+   }
+/*--------------PROFESIONALES TABLA---------------*/
+
+.profesionales{
+    grid-area: pro;
+    border: solid 1px rgb(0, 0, 0);
+    border-width: 0.2rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 18rem;
+    height: 5rem;
+    display: flex;
+    margin: 0px auto;
+}
+
+.profesionales tr th{
+    text-align: center;
+    width: 8rem;
+    height: 1rem;
+}
+/*--------------BOOTSTRAP---------------*/
+
+.accordion-button{
+    background-color: rgb(10, 10, 10);
+}
+.collapsed{
+    background-color: rgb(10, 10, 10);
+}
+.accordion-body{
+    background-color: rgb(123, 149, 161);
+    
+    
+}
+
+
+.dropdown{
+    background-color: rgb(109, 95, 95);
+}
+.dropdown-item{
+    background-color: rgb(123, 149, 161);
+}
+.dropdown-menu-dark{
+    background-color: rgb(135, 165, 179);
+}
+/*--------------MEDIA QUERIES---------------*/
+
+@media only screen and (max-width: 480px) {
+    .gridPadre{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "slogan slogan"
+        "contenido contenido"
+        "footer footer";
+        grid-template-rows: 150px 300px auto auto 50px;
+        grid-template-columns: 50% 50%;
+    }
+    .gridPadrepro{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "slogan slogan"
+        "pro    pro"
+        "footer footer";
+        grid-template-rows: 150px 300px auto auto;
+        grid-template-columns: 50% 50%;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+        
+    }
+    
+    section p a{
+        font-size: 1.2rem;
+        
+    }
+
+    .pie {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .pie ul li a{
+        font-size: 1.5rem;
+        padding: 0.5rem;
+       
+    }
+
+    .videos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+ 
+    
+} 
+@media only screen and (max-width: 768px) {
+    
+    section p a{
+        font-size: 1.1rem;
+    }
+    .pie ul li a{
+        font-size: 1.3rem;
+        padding: 0.5rem;
+       
+    }
+ 
+} 
